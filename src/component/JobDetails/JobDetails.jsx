@@ -9,10 +9,10 @@ const JobDetails = () => {
    console.log(job);
     return (
         <div className="max-w-6xl mx-auto">
-            <div className="flex">
+            <div className="flex justify-between">
             <img src="https://i.ibb.co.com/56rQVrR/bg1.png" alt="" />
-            <h1 className=" text-center text-4xl font-extrabold"> Job Details : {id}</h1>
-            <img className="rotate-180 ml-96" src="https://i.ibb.co.com/56rQVrR/bg1.png" alt="" />
+            <h1 className="  text-4xl mt-16  font-extrabold"> Job Details</h1>
+            <img className="rotate-180" src="https://i.ibb.co.com/56rQVrR/bg1.png" alt="" />
             </div>
            
             
