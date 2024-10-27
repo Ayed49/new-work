@@ -1,5 +1,6 @@
 import { MdLocationOn } from "react-icons/md";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 
 
@@ -27,7 +28,7 @@ const Job = ({job}) => {
         
     </div>
     <div className="card-actions">
-      <button className="btn btn-primary">View Details</button>
+      <Link to={`/job/${id}`}><button className="btn btn-primary">View Details</button></Link>
     </div>
   </div>
 </div>
