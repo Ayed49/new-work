@@ -10,8 +10,12 @@ const Job = ({job}) => {
       alt="Shoes" />
   </figure>
   <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 className="card-title">{job_title}</h2>
+    <p>{company_name}</p>
+    <div>
+        <button className="px-5 py-2 font-extrabold border rounded mr-4 border-[#7E90FE]">{remote_or_onsite}</button>
+        <button className="px-5 py-2 font-extrabold border rounded mr-4 border-[#7E90FE]">{job_type}</button>
+    </div>
     <div className="card-actions justify-end">
       <button className="btn btn-primary">Buy Now</button>
     </div>
