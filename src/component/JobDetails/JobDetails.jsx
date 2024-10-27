@@ -9,9 +9,15 @@ const JobDetails = () => {
    console.log(job);
     return (
         <div className="max-w-6xl mx-auto">
-            <h1>Job Details : {id}</h1>
+            <div className="flex">
             <img src="https://i.ibb.co.com/56rQVrR/bg1.png" alt="" />
-            <div className="grid md:grid-cols-4 gap-4">
+            <h1 className=" text-center text-4xl font-extrabold"> Job Details : {id}</h1>
+            <img className="rotate-180 ml-96" src="https://i.ibb.co.com/56rQVrR/bg1.png" alt="" />
+            </div>
+           
+            
+
+            {/* <div className="grid md:grid-cols-4 gap-4">
 
 
                 <div className="border md:col-span-3">
@@ -21,7 +27,7 @@ const JobDetails = () => {
 
                 </div>
 
-            </div>
+            </div> */}
         </div>
     );
 };
