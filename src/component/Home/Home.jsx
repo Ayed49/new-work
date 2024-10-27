@@ -5,9 +5,12 @@ import HomeBanner from "../HomeBanner/HomeBanner";
 
 const Home = () => {
     return (
-        <div className="ml-20 mr-20 mt-5">
+        <div className="max-w-6xl mx-auto">
+            <div>
             <HomeBanner></HomeBanner>
             <CategoryList></CategoryList>
+            </div>
+            
             <FeaturedJobs></FeaturedJobs>
         </div>
     );
