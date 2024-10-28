@@ -6,6 +6,10 @@ import { MdEmail } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../LocalStroage/LocalStroage";
+
+
+
 const JobDetails = () => {
    const jobs = useLoaderData();
    const {id} = useParams();
@@ -14,7 +18,8 @@ const JobDetails = () => {
    console.log(job);
 
    const handleJobApply = () =>{
-    toast('you have applied successfully')
+    saveJobApplication(id);
+    toast('you have applied successfully');
    }
 
     return (
