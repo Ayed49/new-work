@@ -4,12 +4,19 @@ import { MdDateRange } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const JobDetails = () => {
    const jobs = useLoaderData();
    const {id} = useParams();
    const idInt = parseInt(id);
    const job = jobs.find(job => job.id === idInt);
    console.log(job);
+
+   const handleJobApply = () =>{
+    toast('you have applied successfully')
+   }
+
     return (
         <div className="max-w-6xl mx-auto">
             <div className="flex justify-between">
@@ -17,7 +24,7 @@ const JobDetails = () => {
             <h1 className="  text-4xl mt-16  font-extrabold"> Job Details</h1>
             <img className="rotate-180" src="https://i.ibb.co.com/56rQVrR/bg1.png" alt="" />
             </div>
-            <div className="grid md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 gap-4 p-5">
                 <div>
                     <article>
                         <span className="text-xl font-extrabold">Job Description:</span>A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.
@@ -35,7 +42,7 @@ const JobDetails = () => {
                         <p>2-3 Years in this field.</p>
                     </article>
                 </div>
-                <div>
+                <div className="ml-8">
                     <div>
                         <h3>Job Details</h3>
                         <div>
@@ -55,8 +62,11 @@ const JobDetails = () => {
                                 Dhaka, Bangladesh </h1>
 
                             </div>
-                            <Link> <button className="btn btn-primary mt-14">Apply Now</button> </Link>
+                            <Link> <button
+                            onClick={handleJobApply}
+                            className="btn btn-primary mt-14">Apply Now</button> </Link>
                         </div>
+                        <ToastContainer />
                     </div>
                 </div>
             </div>
